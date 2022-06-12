@@ -61,6 +61,31 @@ function App() {
         <div className="text-grey-600 font-bold text-lg mb-2">
           react ethereum dapp
         </div>
+        <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
+          <div className="text-gray-600 font-bold text-md mb-2 ">
+            fetchGreeting - smart contract - testnest
+          </div>
+          <div className="flex">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white "></button>
+          </div>
+        </div>
+        <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
+          <div className="text-gray-600 font-bold text-md mb-2">
+            update greeting message on smart contract
+          </div>
+          <form
+            className="flex items-center justofy-between"
+            // onSubmit={(event) => handleSubmit(event)}
+          >
+            <input
+              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
+              name="greetingInput"
+            />
+            <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              setGreeting
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

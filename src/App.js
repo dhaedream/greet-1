@@ -55,7 +55,15 @@ function App() {
     await window.ethereum.request({ method: "eth_requestAccounts " });
   }
 
-  return <div className=""></div>;
+  return (
+    <div className="">
+      <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4 ">
+        <div className="text-grey-600 font-bold text-lg mb-2">
+          react ethereum dapp
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

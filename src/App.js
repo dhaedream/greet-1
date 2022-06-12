@@ -42,12 +42,17 @@ function App() {
         Greeter.abi,
         signer
       );
-      // set new greeting
+      //set new greeting
       const transaction = await contract.setGreeting(value);
-      // executing transaction
+      // execute transaction
       await transaction.wait();
       fetchGreeting();
     }
+  }
+
+  async function requestAccount() {
+    // using metamask request function on window's ethereum object
+    await window.ethereum.request({ method: "eth_requestAccounts " });
   }
 
   return <div className=""></div>;

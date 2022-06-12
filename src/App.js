@@ -31,6 +31,25 @@ function App() {
     }
   }
 
+  async function setGreeting(value) {
+    if (!value) return;
+    if (!typeof window.ethereum !== "undefinded") {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        greeterContractAddress,
+        Greeter.abi,
+        signer
+      );
+      // set new greeting
+      const transaction = await contract.setGreeting(value);
+      // executing transaction
+      await transaction.wait();
+      fetchGreeting();
+    }
+  }
+
   return <div className=""></div>;
 }
 

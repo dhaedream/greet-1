@@ -55,6 +55,17 @@ function App() {
     await window.ethereum.request({ method: "eth_requestAccounts " });
   }
 
+  async function handleSubmit(event) {
+    // prevent default submit
+    event.preventDefault();
+    // targeting input data + directing it to blockchain
+    await setGreeting(event.target.greetingInput.value);
+    // updating component state w added input values from blockchain data
+    setGreetingValue(event.target.greetingInput.value);
+    // reset form input field
+    event.target.greetingInput.value = "";
+  }
+
   return (
     <div className="">
       <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4 ">
@@ -75,7 +86,7 @@ function App() {
           </div>
           <form
             className="flex items-center justofy-between"
-            // onSubmit={(event) => handleSubmit(event)}
+            onSubmit={(event) => handleSubmit(event)}
           >
             <input
               className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
@@ -85,6 +96,12 @@ function App() {
               setGreeting
             </button>
           </form>
+        </div>
+        <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
+          <div className="text-gray-600 font-bold text-md mb-2">
+            new greeting message
+          </div>
+          <p>{greeting}</p>
         </div>
       </div>
     </div>

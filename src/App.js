@@ -68,7 +68,7 @@ function App() {
   // }
 
   return (
-    <div className="">
+    <div className="w-full max-w-lg container">
       <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4 ">
         <div className="text-grey-600 font-bold text-lg mb-2">
           react ethereum dapp

@@ -32,40 +32,40 @@ function App() {
     }
   }
 
-  // async function setGreeting(value) {
-  //   if (!value) return;
-  //   if (!typeof window.ethereum !== "undefinded") {
-  //     await requestAccount();
-  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
-  //     const signer = provider.getSigner();
-  //     const contract = new ethers.Contract(
-  //       greeterContractAddress,
-  //       Greeter.abi,
-  //       signer
-  //     );
-  //     //set new greeting
-  //     const transaction = await contract.setGreeting(value);
-  //     // execute transaction
-  //     await transaction.wait();
-  //     fetchGreeting();
-  //   }
-  // }
+  async function setGreeting(value) {
+    if (!value) return;
+    if (!typeof window.ethereum !== "undefinded") {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        greeterContractAddress,
+        Greeter.abi,
+        signer
+      );
+      //set new greeting
+      const transaction = await contract.setGreeting(value);
+      // execute transaction
+      await transaction.wait();
+      fetchGreeting();
+    }
+  }
 
-  // async function requestAccount() {
-  //   // using metamask request function on window's ethereum object
-  //   await window.ethereum.request({ method: "eth_requestAccounts" });
-  // }
+  async function requestAccount() {
+    // using metamask request function on window's ethereum object
+    await window.ethereum.request({ method: "eth_requestAccounts" });
+  }
 
-  // async function handleSubmit(event) {
-  //   // prevent default submit
-  //   event.preventDefault();
-  //   // targeting input data + directing it to blockchain
-  //   await setGreeting(event.target.greetingInput.value);
-  //   // updating component state w added input values from blockchain data
-  //   setGreetingValue(event.target.greetingInput.value);
-  //   // reset form input field
-  //   event.target.greetingInput.value = "";
-  // }
+  async function handleSubmit(event) {
+    // prevent default submit
+    event.preventDefault();
+    // targeting input data + directing it to blockchain
+    await setGreeting(event.target.greetingInput.value);
+    // updating component state w added input values from blockchain data
+    setGreetingValue(event.target.greetingInput.value);
+    // reset form input field
+    event.target.greetingInput.value = "";
+  }
 
   return (
     <div className="w-full max-w-lg container">
@@ -92,7 +92,7 @@ function App() {
           </div>
           <form
             className="flex items-center justofy-between"
-            // onSubmit={(event) => handleSubmit(event)}
+            onSubmit={(event) => handleSubmit(event)}
           >
             <input
               className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "

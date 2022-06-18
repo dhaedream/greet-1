@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .blockchain-data {
+    @apply text-violet-50;
+  }
+}

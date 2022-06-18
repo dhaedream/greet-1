@@ -80,7 +80,29 @@ function App() {
       {/* card  */}
       <div className="flex justify-center h-4/6 w-6/6">
         <div className="border-solid border-2 border-red-500 w-4/5">
-          card container
+          <div>
+            <div>
+              <div className="blockchain-data">greeting</div>
+              <div>
+                <div>input</div>
+              </div>
+              <div>
+                <div id="button1">
+                  <button
+                    className="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={fetchGreeting}
+                  >
+                    fetch
+                  </button>
+                </div>
+                <div id="button2">
+                  <button className="bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -68,12 +68,14 @@ function App() {
   }
 
   return (
-    <div className="w-full max-w-lg container">
-      <div className="shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4 ">
-        <div className="text-grey-600 font-bold text-lg mb-2">
+    <div className="w-full  flex bg-gray-500">
+      <div className="container border-solid border-2 border-red-500 gshadow-lg rounded flex flex-col ">
+        <div className=" bg-indigo-500 border-solid border-2 border-black-500 text-grey-600  text-lg mb-2 font-black">
           react ethereum dapp
         </div>
-        <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
+      </div>
+    </div>
+    /* <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
           <div className="text-gray-600 font-bold text-md mb-2 ">
             fetchGreeting - smart contract - testnest
           </div>
@@ -110,7 +112,7 @@ function App() {
           <p>{greeting}</p>
         </div>
       </div>
-    </div>
+    </div> */
   );
 }
 

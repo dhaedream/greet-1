@@ -68,13 +68,23 @@ function App() {
   }
 
   return (
-    <div className="w-full  flex bg-gray-500">
-      <div className="container border-solid border-2 border-red-500 gshadow-lg rounded flex flex-col ">
-        <div className=" bg-indigo-500 border-solid border-2 border-black-500 text-grey-600  text-lg mb-2 font-black">
+    <div className="w-screen h-screen bg-black text-violet-800 flex flex-col">
+      <div className="container border-solid border-2 border-red-500 gshadow-lg rounded">
+        <div className="text-grey-600 text-4xl py-6 px-2 mb-2 font-black">
           react ethereum dapp
+        </div>
+        <div className="text-lg px-2 font-semibold">
+          INTERACT WITH GOERLI TESTNET
+        </div>
+      </div>
+      {/* card  */}
+      <div className="flex justify-center h-4/6 w-6/6">
+        <div className="border-solid border-2 border-red-500 w-4/5">
+          card container
         </div>
       </div>
     </div>
+
     /* <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
           <div className="text-gray-600 font-bold text-md mb-2 ">
             fetchGreeting - smart contract - testnest

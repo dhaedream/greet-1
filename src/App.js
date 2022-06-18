@@ -68,8 +68,8 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-black text-violet-800 flex flex-col">
-      <div className="container border-solid border-2 border-red-500 gshadow-lg rounded">
+    <div className="w-screen h-screen bg-black text-violet-800 flex flex-col content-between">
+      <div className="flex flex-col container border-solid border-2 border-red-500 gshadow-lg rounded my-14 w-2/5">
         <div className="text-grey-600 text-4xl py-6 px-2 mb-2 font-black">
           react ethereum dapp
         </div>

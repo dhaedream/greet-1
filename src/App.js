@@ -78,15 +78,42 @@ function App() {
         </div>
       </div>
       {/* card  */}
-      <div className="flex justify-center h-4/6 w-6/6">
-        <div className="border-solid border-2 border-red-500 w-4/5">
-          <div>
-            <div>
-              <div className="blockchain-data">greeting</div>
-              <div>
-                <div>input</div>
+      <div className="flex justify-center h-4/6 w-full border-solid border-2 border-red-50">
+        <div className="border-solid border-2 border-red-500 w-4/5 ">
+          <div className="flex flex-col content-between h-full border-solid border-2 border-red-50">
+            <div className="flex flex-col items-center border-solid border-2 border-red-50">
+              <button
+                className="bg-indigo-700 w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                onClick={fetchGreeting}
+              >
+                fetch
+              </button>
+              <div className="neon flex">{greeting}</div>
+            </div>
+
+            <form
+              className="flex flex-col items-center"
+              onSubmit={(event) => handleSubmit(event)}
+            >
+              <input
+                className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
+                name="greetingInput"
+              />
+              <button className="bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                setGreeting
+              </button>
+            </form>
+          </div>
+          {/* <div>
+                <div>
+                  <input
+                    className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
+                    name="greetingInput"
+                  />
+                </div>
               </div>
               <div>
+
                 <div id="button1">
                   <button
                     className="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -95,14 +122,16 @@ function App() {
                     fetch
                   </button>
                 </div>
+
                 <div id="button2">
-                  <button className="bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <button
+                    className="bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={handleSubmit}
+                  >
                     update
                   </button>
                 </div>
-              </div>
-            </div>
-          </div>
+              </div> */}
         </div>
       </div>
     </div>

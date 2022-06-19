@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import Greeter from "./artifacts/contracts/Greeter.sol/Greeter.json";
@@ -80,7 +80,7 @@ function App() {
       {/* card  */}
       <div className="flex justify-center h-4/6 w-full border-solid border-2 border-red-50">
         <div className="border-solid border-2 border-red-500 w-4/5 ">
-          <div className="flex flex-col content-between h-full border-solid border-2 border-red-50">
+          <div className="flex flex-col content-between h-full border-solid border-2 border-red-50 ">
             <div className="flex flex-col items-center border-solid border-2 border-red-50">
               <button
                 className="bg-indigo-700 w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -92,7 +92,7 @@ function App() {
             </div>
 
             <form
-              className="flex flex-col items-center"
+              className="flex flex-col items-center min-h-fit h-1/6 "
               onSubmit={(event) => handleSubmit(event)}
             >
               <input
@@ -104,76 +104,9 @@ function App() {
               </button>
             </form>
           </div>
-          {/* <div>
-                <div>
-                  <input
-                    className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
-                    name="greetingInput"
-                  />
-                </div>
-              </div>
-              <div>
-
-                <div id="button1">
-                  <button
-                    className="bg-indigo-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={fetchGreeting}
-                  >
-                    fetch
-                  </button>
-                </div>
-
-                <div id="button2">
-                  <button
-                    className="bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={handleSubmit}
-                  >
-                    update
-                  </button>
-                </div>
-              </div> */}
         </div>
       </div>
     </div>
-
-    /* <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
-          <div className="text-gray-600 font-bold text-md mb-2 ">
-            fetchGreeting - smart contract - testnest
-          </div>
-          <div className="flex">
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              onClick={fetchGreeting}
-            >
-              fetchGreeting
-            </button>
-          </div>
-        </div>
-        <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
-          <div className="text-gray-600 font-bold text-md mb-2">
-            update greeting message on smart contract
-          </div>
-          <form
-            className="flex items-center justofy-between"
-            onSubmit={(event) => handleSubmit(event)}
-          >
-            <input
-              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
-              name="greetingInput"
-            />
-            <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              setGreeting
-            </button>
-          </form>
-        </div>
-        <div className="w-full border-4 p-2 mb-4 rounded border-gray-400">
-          <div className="text-gray-600 font-bold text-md mb-2">
-            new greeting message
-          </div>
-          <p>{greeting}</p>
-        </div>
-      </div>
-    </div> */
   );
 }
 

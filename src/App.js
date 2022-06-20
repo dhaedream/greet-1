@@ -7,6 +7,7 @@ const greeterContractAddress = "0xaf5d64DD1e1056A627AD4F1b2b5a01afee0e67a8";
 
 function App() {
   const [greeting, setGreetingValue] = useState("");
+  const [motion, setMotion] = useState();
 
   async function fetchGreeting() {
     // checking for metamask
@@ -19,6 +20,8 @@ function App() {
         Greeter.abi,
         provider
       );
+      setMotion(!motion);
+
       try {
         // wait for contract + pass data from blckchain
         // greet is a function frm contract
@@ -80,25 +83,27 @@ function App() {
       {/* card  */}
       <div className="flex justify-center h-4/6 w-full border-solid border-2 border-red-50">
         <div className="flex flex-col space-y-20  my-auto   content-center  border-solid border-2 border-red-50 w-4/5 ">
-          <div className="flex flex-col space-y-10 items-center border-solid border-2 border-red-50">
+          <div className="flex flex-col space-y-10  items-center border-solid border-2 border-red-50">
             <button
-              className="bg-indigo-700 rounded-full w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4"
+              className="bg-indigo-700 my-6 rounded-full w-1/9 motion:animate-bounce hover:bg-blue-700 text-white font-bold py-2 px-4"
               onClick={fetchGreeting}
             >
-              fetch
+              <p className="button-font">fetch</p>
+              <p>blockchain</p>
+              <p>data</p>
             </button>
             <div className="neon flex">{greeting}</div>
           </div>
 
           <form
-            className="flex flex-col space-y-10 items-center min-h-fit h-1/6 "
+            className="flex flex-col pb-6 space-y-10 items-center min-h-fit h-1/6 "
             onSubmit={(event) => handleSubmit(event)}
           >
             <input
               className="shadow appearance-none border rounded-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
               name="greetingInput"
             />
-            <button className="rounded-full bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4">
+            <button className="rounded-full  bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4">
               setGreeting
             </button>
           </form>

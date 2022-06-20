@@ -79,31 +79,29 @@ function App() {
       </div>
       {/* card  */}
       <div className="flex justify-center h-4/6 w-full border-solid border-2 border-red-50">
-        <div className="border-solid border-2 border-red-500 w-4/5 ">
-          <div className="flex flex-col content-between h-full border-solid border-2 border-red-50 ">
-            <div className="flex flex-col items-center border-solid border-2 border-red-50">
-              <button
-                className="bg-indigo-700 w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={fetchGreeting}
-              >
-                fetch
-              </button>
-              <div className="neon flex">{greeting}</div>
-            </div>
-
-            <form
-              className="flex flex-col items-center min-h-fit h-1/6 "
-              onSubmit={(event) => handleSubmit(event)}
+        <div className="flex flex-col space-y-20  my-auto   content-center  border-solid border-2 border-red-50 w-4/5 ">
+          <div className="flex flex-col space-y-10 items-center border-solid border-2 border-red-50">
+            <button
+              className="bg-indigo-700 rounded-full w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4"
+              onClick={fetchGreeting}
             >
-              <input
-                className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
-                name="greetingInput"
-              />
-              <button className="bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                setGreeting
-              </button>
-            </form>
+              fetch
+            </button>
+            <div className="neon flex">{greeting}</div>
           </div>
+
+          <form
+            className="flex flex-col space-y-10 items-center min-h-fit h-1/6 "
+            onSubmit={(event) => handleSubmit(event)}
+          >
+            <input
+              className="shadow appearance-none border rounded-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg "
+              name="greetingInput"
+            />
+            <button className="rounded-full bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4">
+              setGreeting
+            </button>
+          </form>
         </div>
       </div>
     </div>

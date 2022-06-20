@@ -92,11 +92,13 @@ function App() {
               <p>blockchain</p>
               <p>data</p>
             </button>
-            <div className="neon flex">{greeting}</div>
+            <div className="neon flex border-solid border-2 border-red-50 overflow-scroll max-w-[80%] max-h-40 text-center">
+              {greeting}
+            </div>
           </div>
 
           <form
-            className="flex flex-col pb-6 space-y-10 items-center min-h-fit h-1/6 "
+            className="flex flex-col pb-6 space-y-7 items-center min-h-fit h-1/6 "
             onSubmit={(event) => handleSubmit(event)}
           >
             <input

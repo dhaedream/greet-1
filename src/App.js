@@ -71,19 +71,20 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-black text-violet-800 flex flex-col content-between">
-      <div className="flex flex-col container border-solid border-2 border-red-500 gshadow-lg rounded my-14 w-2/5">
-        <div className="text-grey-600 text-4xl py-6 px-2 mb-2 font-black">
+    <div className="background">
+      {/* <div className="background w-screen h-screen min-h-fit text-violet-800 flex flex-col content-between"> */}
+      <div className="flex flex-col border-solid border-2 border-red-500 gshadow-lg rounded w-2/5">
+        <div className="text-grey-600 text-4xl py-3 px-2 mb-2 font-black">
           react ethereum dapp
         </div>
-        <div className="text-lg px-2 font-semibold">
+        <div className="text-lg px-2 font-semibold mb-3">
           INTERACT WITH GOERLI TESTNET
         </div>
       </div>
       {/* card  */}
-      <div className="flex justify-center h-4/6 w-full border-solid border-2 border-red-50">
-        <div className="flex flex-col space-y-20  my-auto   content-center  border-solid border-2 border-red-50 w-4/5 ">
-          <div className="flex flex-col space-y-10  items-center border-solid border-2 border-red-50">
+      <div className="flex justify-center min-h-fit  w-full border-solid border-2 border-red-50 my-10">
+        <div className="flex flex-col space-y-8  my-auto   content-center  border-solid border-2 border-red-500 h-4/6 w-4/5 ">
+          <div className="flex flex-col space-y-5  items-center border-solid border-2 border-red-50">
             <button
               className="bg-indigo-700 my-6 rounded-full w-1/9 motion:animate-bounce hover:bg-blue-700 text-white font-bold py-2 px-4"
               onClick={fetchGreeting}
@@ -92,13 +93,13 @@ function App() {
               <p>blockchain</p>
               <p>data</p>
             </button>
-            <div className="neon flex border-solid border-2 border-red-50 overflow-scroll max-w-[80%] max-h-40 text-center">
+            <div className="neon flex border-solid border-2 border-red-500 overflow-scroll max-w-[80%] max-h-40 text-center">
               {greeting}
             </div>
           </div>
 
           <form
-            className="flex flex-col pb-6 space-y-7 items-center min-h-fit h-1/6 "
+            className="flex flex-col pb-6 space-y-7 items-center min-h-fit h-1/7 "
             onSubmit={(event) => handleSubmit(event)}
           >
             <input

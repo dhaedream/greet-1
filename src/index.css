@@ -4,9 +4,10 @@
 
 @layer components {
   .background {
-    background-image: url("https://media.giphy.com/media/W5UoBN0YMdT1QP8Yfr/giphy.gif");
+    background-image: url("https://media.giphy.com/media/MFabj1E9mgUsqwVWHu/giphy.gif");
     background-size: cover;
     background-repeat: no-repeat;
+    filter: brightness(50%);
     height: 105vh;
     min-height: contain;
     color: white;

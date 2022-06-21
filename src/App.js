@@ -73,7 +73,7 @@ function App() {
   return (
     <div className="background">
       {/* <div className="background w-screen h-screen min-h-fit text-violet-800 flex flex-col content-between"> */}
-      <div className="flex flex-col border-solid border-2 border-red-500 gshadow-lg rounded lg:w-3/5 md:w-4/5 sm:w-5/5 text-xs">
+      <div className="flex flex-col border-solid border-2 border-black gshadow-lg rounded-lg  bg-slate-900/90 lg:w-3/5 md:w-4/5 sm:w-5/5 text-xs">
         {/* <div className="flex flex-col border-solid border-2 border-red-500 gshadow-lg rounded w-5/5  sm:w-3/5"> */}
         <div className="text-grey-600 text-4xl py-3 px-2 mb-2">
           react ethereum dapp
@@ -83,18 +83,18 @@ function App() {
         </div>
       </div>
       {/* card  */}
-      <div className="flex justify-center min-h-fit  w-full border-solid border-2 border-red-50 my-20">
-        <div className="flex flex-col space-y-8  my-auto   content-center  border-solid border-2 border-red-500 h-4/6 w-4/5 ">
-          <div className="flex flex-col space-y-1  items-center border-solid border-2 border-red-50">
+      <div className="flex justify-center min-h-fit  w-full  my-20">
+        <div className="flex flex-col space-y-8  my-auto   content-center  border-solid border-2 border-black rounded-lg bg-slate-900/90 h-4/6 w-4/5 ">
+          <div className="flex flex-col space-y-1  items-center">
             <button
-              className="bg-indigo-700 my-6 rounded-full w-1/9 motion:animate-bounce hover:bg-blue-700 text-white font-bold py-2 px-4"
+              className="bg-indigo-500 my-6 rounded-full w-1/9 animate-bounce  hover:bg-blue-700 focus:animate-none text-white font-bold py-2 px-4"
               onClick={fetchGreeting}
             >
               <p className="button-font">fetch</p>
               <p>blockchain</p>
               <p>data</p>
             </button>
-            <div className="neon flex border-solid border-2 border-red-500 overflow-scroll max-w-[80%] max-h-40 text-center">
+            <div className="neon flex border-solid border-2 border-black overflow-scroll bg-black/95 rounded-lg max-w-[80%] max-h-40 text-center ">
               {greeting}
             </div>
           </div>

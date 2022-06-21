@@ -73,8 +73,9 @@ function App() {
   return (
     <div className="background">
       {/* <div className="background w-screen h-screen min-h-fit text-violet-800 flex flex-col content-between"> */}
-      <div className="flex flex-col border-solid border-2 border-red-500 gshadow-lg rounded w-2/5">
-        <div className="text-grey-600 text-4xl py-3 px-2 mb-2 font-black">
+      <div className="flex flex-col border-solid border-2 border-red-500 gshadow-lg rounded lg:w-3/5 md:w-4/5 sm:w-5/5 text-xs">
+        {/* <div className="flex flex-col border-solid border-2 border-red-500 gshadow-lg rounded w-5/5  sm:w-3/5"> */}
+        <div className="text-grey-600 text-4xl py-3 px-2 mb-2">
           react ethereum dapp
         </div>
         <div className="text-lg px-2 font-semibold mb-3">
@@ -82,9 +83,9 @@ function App() {
         </div>
       </div>
       {/* card  */}
-      <div className="flex justify-center min-h-fit  w-full border-solid border-2 border-red-50 my-10">
+      <div className="flex justify-center min-h-fit  w-full border-solid border-2 border-red-50 my-20">
         <div className="flex flex-col space-y-8  my-auto   content-center  border-solid border-2 border-red-500 h-4/6 w-4/5 ">
-          <div className="flex flex-col space-y-5  items-center border-solid border-2 border-red-50">
+          <div className="flex flex-col space-y-1  items-center border-solid border-2 border-red-50">
             <button
               className="bg-indigo-700 my-6 rounded-full w-1/9 motion:animate-bounce hover:bg-blue-700 text-white font-bold py-2 px-4"
               onClick={fetchGreeting}
